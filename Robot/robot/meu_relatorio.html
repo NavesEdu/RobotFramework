@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230314 14:32:02.371" rpa="false" schemaversion="3">
+<suite id="s1" name="Teste" source="C:\Users\eduardonaves\Desktop\Robot\teste.robot">
+<test id="s1-t1" name="Cenário 1: Acessando o HDM e fazer um Check Device em uma ONT" line="35">
+<kw name="Abrir Site">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://200.141.223.78:17025/hdm/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230314 14:32:02.558" level="INFO">Opening browser 'chrome' to base url 'http://200.141.223.78:17025/hdm/'.</msg>
+<status status="PASS" starttime="20230314 14:32:02.558" endtime="20230314 14:32:05.539"/>
+</kw>
+<status status="PASS" starttime="20230314 14:32:02.558" endtime="20230314 14:32:05.539"/>
+</kw>
+<kw name="Preencher o login">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>mdasilva</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 14:32:05.541" level="INFO">Typing text 'mdasilva' into text field '//*[@id="j_username"]'.</msg>
+<status status="PASS" starttime="20230314 14:32:05.540" endtime="20230314 14:32:05.636"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>140359mpBS@@@</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230314 14:32:05.637" level="INFO">Typing text '140359mpBS@@@' into text field '//*[@id="j_password"]'.</msg>
+<status status="PASS" starttime="20230314 14:32:05.636" endtime="20230314 14:32:05.741"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${domain_list}</arg>
+<arg>super-domain</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20230314 14:32:05.741" level="INFO">Selecting options from selection list '//select[@id="m_domain"]' by value super-domain.</msg>
+<status status="PASS" starttime="20230314 14:32:05.741" endtime="20230314 14:32:05.821"/>
+</kw>
+<status status="PASS" starttime="20230314 14:32:05.540" endtime="20230314 14:32:05.821"/>
+</kw>
+<kw name="Clicar no botão login">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 14:32:05.822" level="INFO">Clicking element '//button[@class="hdm-button"]'.</msg>
+<status status="PASS" starttime="20230314 14:32:05.822" endtime="20230314 14:32:08.578"/>
+</kw>
+<status status="PASS" starttime="20230314 14:32:05.822" endtime="20230314 14:32:08.578"/>
+</kw>
+<kw name="Clicar link com href">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="mainTable"]/tbody/tr[2]/td/table/tbody/tr/td[1]/table/tbody/tr/td[4]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 14:32:08.580" level="INFO">Clicking element 'xpath://*[@id="mainTable"]/tbody/tr[2]/td/table/tbody/tr/td[1]/table/tbody/tr/td[4]/a'.</msg>
+<status status="PASS" starttime="20230314 14:32:08.579" endtime="20230314 14:32:11.038"/>
+</kw>
+<status status="PASS" starttime="20230314 14:32:08.579" endtime="20230314 14:32:11.038"/>
+</kw>
+<kw name="Selecionar Device">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${search_profile}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230314 14:32:11.040" level="INFO">Clicking element '//*[@id="filterTable"]/tbody/tr/td/div/table/tbody/tr/td/fieldset/legend/span'.</msg>
+<status status="PASS" starttime="20230314 14:32:11.039" endtime="20230314 14:32:11.184"/>
+</kw>
+<status status="PASS" starttime="20230314 14:32:11.039" endtime="20230314 14:32:11.184"/>
+</kw>
+<status status="PASS" starttime="20230314 14:32:02.557" endtime="20230314 14:32:11.185"/>
+</test>
+<status status="PASS" starttime="20230314 14:32:02.373" endtime="20230314 14:32:11.187"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Teste">Teste</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
